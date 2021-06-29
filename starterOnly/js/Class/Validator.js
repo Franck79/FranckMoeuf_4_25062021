@@ -15,7 +15,7 @@ export default class Validator {
 
   setFormValid = (state) => (this.#formValid = state);
 
-  // Fonctions pour les types de validation
+  // Fonctions pour les controles sur les différents types de validation
   nameValidation = (name) =>
     name.value !== null && name.value.length >= 2 ? true : false;
 
@@ -56,7 +56,7 @@ export default class Validator {
   };
 
   // Vérification de la validité des saisies des différents types des input
-  // pour chaque élément pour l'attribut formFields
+  // pour chaque élément de formFields
   launchValidation = () => {
     // Validation du formulaire réinitialisée
     this.resetValidation();
