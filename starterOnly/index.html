@@ -4,30 +4,26 @@
     <meta charset="utf-8" />
     <title>Reservation</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" href="./css/modal.css" />
+    <link rel="stylesheet" href="modal.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link
-      href="https://fonts.googleapis.com/css?family=DM+Sans"
-      rel="stylesheet"
-    />
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans"/>
   </head>
   <body>
     <div class="topnav" id="myTopnav">
       <div class="header-logo">
-      <img alt="logo" src="./images/Logo.png" width="auto" height="auto" />
-    </div>
-    <div class="main-navbar">
+        <img alt="logo" src="Logo.png" width="auto" height="auto" />
+      </div>
+      <div class="main-navbar">
       
-      <a href="#" class="active"><span>Accueil</span></a>
-      <a href="#"><span>Détails de l'évènement</span></a>
-      <a href="#"><span>À propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Évènements passés</span></a>
-      <a href="javascript:void(0);" class="icon" onclick="editNav()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
+        <a href="#" class="active"><span>Accueil</span></a>
+        <a href="#"><span>Détails de l'évènement</span></a>
+        <a href="#"><span>À propos</span></a>
+        <a href="#"><span>Contact</span></a>
+        <a href="#"><span>Évènements passés</span></a>
+        <a href="javascript:void(0);" class="icon" onclick="editNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </div>
   </div>
     <main>
@@ -46,7 +42,7 @@
           </button>
         </div>
         <div class="hero-img">
-          <img src="./images/bg_img.jpg" alt="img" />
+          <img src="./bg_img.jpg" alt="img" />
         </div>
         <button class="btn-signup modal-btn">
           je m'inscris
@@ -61,11 +57,10 @@
               name="reserve"
               action="index.html"
               method="get"
-              novalidate
+              onsubmit="return validate();"
             >
-              <div
-                class="formData">
-                <label for="first">Prénom</label><br>
+              <div class="formData">
+                <label>Prénom</label><br>
                 <input
                   class="text-control"
                   type="text"
@@ -76,7 +71,7 @@
               </div>
               <div
                 class="formData">
-                <label for="last">Nom</label><br>
+                <label>Nom</label><br>
                 <input
                   class="text-control"
                   type="text"
@@ -86,7 +81,7 @@
               </div>
               <div
                 class="formData">
-                <label for="email">E-mail</label><br>
+                <label>E-mail</label><br>
                 <input
                   class="text-control"
                   type="email"
@@ -96,7 +91,7 @@
               </div>
               <div
                 class="formData">
-                <label for="birthdate" >Date de naissance</label><br>
+                <label>Date de naissance</label><br>
                 <input
                   class="text-control"
                   type="date"
@@ -106,7 +101,7 @@
               </div>
               <div
                 class="formData">
-                <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label><br>
+                <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <p class="text-label">Quelles villes ?</p>
@@ -186,33 +181,27 @@
                   class="checkbox-input"
                   type="checkbox"
                   id="checkbox1"
+                  checked
                 />
                 <label class="checkbox2-label" for="checkbox1" required>
                   <span class="checkbox-icon"></span>
                   J'ai lu et accepté les conditions d'utilisation.
                 </label>
-              </div>
+                <br>
                 <input class="checkbox-input" type="checkbox" id="checkbox2" />
                 <label class="checkbox2-label" for="checkbox2">
                   <span class="checkbox-icon"></span>
-                    Je souhaite être prévenu des prochains évènements.
+                  Je souhaite être prévenu des prochains évènements.
                 </label>
                 <br>
-              
+              </div>
               <input
-                class="button btn-submit"
+                class="btn-submit"
                 type="submit"
+                class="button"
                 value="C'est parti"
               />
             </form>
-            <div class="confirm-modal d-none">
-              <div class="message">Merci! Votre réservation a été reçue!</div>
-              <input
-                type="button"
-                class="button btn-submit close-confirm"
-                value="Fermer"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -222,7 +211,6 @@
         Copyright 2014 - 2020, GameOn Inc.
       </p>
     </footer>
-    <script src="./dist/polyfill.bundle.js" async defer></script>
-    <script src="./dist/app.bundle.js" async defer></script>
+    <script src="modal.js"></script>
   </body>
 </html>
