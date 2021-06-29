@@ -10,7 +10,7 @@ export default class Validator {
 
   setFormValid = (state) => (this.#formValid = state);
 
-  // Methods for validation types
+  // Fonctions pour les types de validation
   nameValidation = (name) =>
     name.value !== null && name.value.length >= 2 ? true : false;
 
@@ -27,7 +27,8 @@ export default class Validator {
 
   dateValidation = (date) => (date.value != "" ? true : false);
 
-  // Reset errors fields style and set the default value for private property #formValid
+  // Réinitialiser le style des champs d'erreurs 
+  // et définir la valeur par défaut pour la propriété privée #formValid
   resetValidation = () => {
     this.setFormValid(true);
     Array.from(this.fieldContainer).map((field) => {
@@ -35,15 +36,16 @@ export default class Validator {
     });
   };
 
-  // Add css style for invalid input entry and show message
+  // Ajout des styles css pour les input invalides et affichage des messages
   invalidInputStyle = (input, invalidMessage) => {
     input.parentNode.setAttribute("data-error-visible", true);
     input.parentNode.setAttribute("data-error", invalidMessage);
   };
 
-  // Check input validity for each element in formFields attribute
+  // Vérification de la validité des saisies des types input
+  // pour chaque élément pour l'attribut formFields
   launchValidation = () => {
-    // reset form validation
+    // Validation du formulaire réinitialisée
     this.resetValidation();
 
     for (const field in this.formFields) {

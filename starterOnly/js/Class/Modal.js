@@ -1,5 +1,5 @@
 export default class Modal {
-  // DOM Elements
+  // Elements du DOM
   static dom = {
     modalbg: document.querySelector(".bground"),
     modalBtn: document.querySelectorAll(".modal-btn"),
@@ -9,7 +9,9 @@ export default class Modal {
     form: document.getElementsByName("reserve")[0],
   };
 
-  // launch modal event, add listener for open the modal and close them with the close button or X button
+  // On lance l'événement modal, 
+  // On ajoute un Event/Listener pour ouvrir le modal 
+  // et le fermer avec le bouton de fermeture
   static launchModalEvent = () => {
     this.dom.modalBtn.forEach((btn) =>
       btn.addEventListener("click", this.launchModal)
@@ -21,13 +23,16 @@ export default class Modal {
 
   };
 
-  // launch modal form, display the modal with css property display block
+  // On lance le formulaire modal, 
+  // On affiche le modal avec le mode d'affichage css "block"
   static launchModal = () => (this.dom.modalbg.style.display = "block");
 
-  // Close modal, hide the modal with css property display none
+  // Fermeture du modal, 
+  // On masque le modal avec la propriété css "none"
   static closeModal = () => (this.dom.modalbg.style.display = "none");
 
-  //Close confirm modal, reset the display of the modal
+  // On ferme la confirmation du modal, 
+  // On réinitialise l'affichage de la modale
   static closeConfirm = () => {
     this.closeModal();
     this.dom.form.style.display = "block";
@@ -35,7 +40,8 @@ export default class Modal {
     this.dom.modalConfirm.classList.remove("confirm-message");
   };
 
-  // Show message validation and hide form
+  // Affichage du message de confirmation 
+  // et on masque le formulaire
   static validation = () => {
     this.dom.form.style.display = "none";
     this.dom.modalConfirm.style.display = "block";

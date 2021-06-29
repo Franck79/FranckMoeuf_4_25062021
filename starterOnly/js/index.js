@@ -4,11 +4,11 @@ import Validator from "./Class/Validator.js";
 import {formFields, fieldContainer} from "./formConfig.js";
 
 
-/* Functions used in onxyz-attribute-style handlers (onclick="editNav()) must be globals,
-   make it a global by assigning to a window property  */
-window.editNav = editNav; //💩
+// Les fonctions utilisées sur onclick="editNav()) doivent être globales,
+// en l'attribuant à la propriété window.
+window.editNav = editNav;
 
-// initialize modal 🚀
+// Initialisation du modal
 Modal.launchModalEvent();
 
 const validator = new Validator(fieldContainer, formFields);
