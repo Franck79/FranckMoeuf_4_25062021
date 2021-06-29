@@ -1,3 +1,6 @@
+// Constante pour récupérer les id des input du formulaire
+// Tyoe de validation
+// et Messages d'invalidité
 const formFields = {
   firstName: {
     element: document.getElementById("first"),
@@ -36,6 +39,7 @@ const formFields = {
   },
 };
 
+// Constante contenant toutes les input du formulaire
 const fieldContainer = document.querySelectorAll(".formData");
 
 export { formFields, fieldContainer};

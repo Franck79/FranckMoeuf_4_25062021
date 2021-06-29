@@ -4,7 +4,7 @@ import Validator from "./Class/Validator.js";
 import {formFields, fieldContainer} from "./formConfig.js";
 
 
-// Les fonctions utilisées sur onclick="editNav()" doivent être globales,
+// La fonction utilisée sur onclick="editNav()" doit être globale,
 // en l'attribuant à la propriété window.
 window.editNav = editNav;
 
