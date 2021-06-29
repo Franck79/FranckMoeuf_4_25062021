@@ -1,3 +1,4 @@
+// Création de la classe Modal
 export default class Modal {
   // Elements du DOM
   static dom = {
@@ -10,7 +11,7 @@ export default class Modal {
   };
 
   // On lance l'événement modal, 
-  // On ajoute un Event/Listener pour ouvrir le modal 
+  // On ajoute un Event/Listener sur le click pour ouvrir le modal 
   // et le fermer avec le bouton de fermeture
   static launchModalEvent = () => {
     this.dom.modalBtn.forEach((btn) =>
@@ -31,8 +32,8 @@ export default class Modal {
   // On masque le modal avec la propriété css "none"
   static closeModal = () => (this.dom.modalbg.style.display = "none");
 
-  // On ferme la confirmation du modal, 
-  // On réinitialise l'affichage de la modale
+  // On supprime la confirmation du modal, 
+  // On réinitialise l'affichage du modal
   static closeConfirm = () => {
     this.closeModal();
     this.dom.form.style.display = "block";
