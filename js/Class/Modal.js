@@ -12,7 +12,7 @@ export default class Modal {
 
   // On lance l'événement modal, 
   // On ajoute un Event/Listener sur le click pour ouvrir le modal 
-  // et on le ferme avec le bouton de fermeture ou fermeture "X".
+  // et on le ferme avec le bouton de fermeture ou la croix pour fermer la fenetre.
   static launchModalEvent = () => {
     this.dom.modalBtn.forEach((btn) =>
       btn.addEventListener("click", this.launchModal)

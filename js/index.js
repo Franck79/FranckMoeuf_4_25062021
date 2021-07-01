@@ -21,9 +21,15 @@ const formName = document.getElementsByName("reserve")[0];
 // on empeche l'envoie de celui ci
 // On réinitialise et on envoie le formulaire après validation 
 formName.onsubmit = (event) => {
-
+console.log("toto");
   event.preventDefault();
-  
+  const values = {};
+  Object.keys(formFields).forEach((formFieldsKey) => {
+    const element = formFields[formFieldsKey].element;
+    const value = element.target.value;
+    values[formFieldsKey] = value;
+  })
+  console.log(values);
   if (validator.launchValidation()) {
     
     formName.reset();
