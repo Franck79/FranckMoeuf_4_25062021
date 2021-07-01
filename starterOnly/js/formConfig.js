@@ -1,5 +1,5 @@
 // Constante pour récupérer les id des input du formulaire
-// Tyoe de validation
+// Type de validation
 // et Messages d'invalidité
 const formFields = {
   firstName: {

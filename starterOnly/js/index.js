@@ -11,9 +11,10 @@ window.editNav = editNav;
 Modal.launchModalEvent();
 
 // Instanciation de la classe Validator
+// en ajoutant en arguments les constantes du fichier formConfig.js
 const validator = new Validator(fieldContainer, formFields);
 
-// Constante pour récupérer le formaulaire par le nom
+// Constante pour récupérer le formulaire par le nom
 const formName = document.getElementsByName("reserve")[0];
 
 // Fonction du formaulaire avec submit

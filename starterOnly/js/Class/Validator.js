@@ -10,9 +10,10 @@ export default class Validator {
     this.formFields = formFields;
 
   }
-
+  // Fonction qui flag si on a passé tous les tests de validation
+  // qui sera donc a true.
   getFormValid = () => this.#formValid;
-
+  // Fonction avec un paramètre a true, qui passera a false si un message n'est pas valide
   setFormValid = (state) => (this.#formValid = state);
 
   // Fonctions pour les controles sur les différents types de validation
@@ -32,8 +33,8 @@ export default class Validator {
 
   dateValidation = (date) => (date.value != "" ? true : false);
 
-  // Réinitialiser le style des champs d'erreurs 
-  // et définir la valeur par défaut pour la propriété #formValid
+  // Réinitialise le style des champs en erreur  
+  // et définit la valeur par défaut pour la propriété #formValid
   resetValidation = () => {
 
     this.setFormValid(true);
@@ -60,7 +61,8 @@ export default class Validator {
   launchValidation = () => {
     // Validation du formulaire réinitialisée
     this.resetValidation();
-
+    // Boucle pour chaque input du formulaire
+    // avec un switch pour check les différents type d'input
     for (const field in this.formFields) {
 
       switch (this.formFields[field].validationType) {
