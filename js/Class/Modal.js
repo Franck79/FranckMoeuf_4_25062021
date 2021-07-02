@@ -1,4 +1,5 @@
-// Création de la classe Modal
+// Création de la classe Modal afin de gérer
+// l'affiche du formulaire et la fenetre de confirmation avec la fermeture
 export default class Modal {
   // Elements du DOM
   static dom = {
@@ -11,13 +12,13 @@ export default class Modal {
   };
 
   // On lance l'événement modal, 
-  // On ajoute un Event/Listener sur le click pour ouvrir le modal 
-  // et on le ferme avec le bouton de fermeture ou la croix pour fermer la fenetre.
+  // On ajoute un Event/Listener sur le click pour ouvrir ou fermer le formulaire
+  // ainsi que le fenetre de confirmation
   static launchModalEvent = () => {
     this.dom.modalBtn.forEach((btn) =>
       btn.addEventListener("click", this.launchModal)
     );
-
+    
     this.dom.closeBtn.addEventListener("click", this.closeModal);
     this.dom.closeBtn.addEventListener("click", this.closeConfirm);
     this.dom.closeConfirm.addEventListener("click", this.closeConfirm);

@@ -33,7 +33,7 @@ export default class Validator {
 
   dateValidation = (date) => (date.value != "" ? true : false);
 
-  // Réinitialise le style des champs en erreur  
+  // Réinitialise les erreurs sur les input  
   // et définit la valeur par défaut pour la propriété #formValid
   resetValidation = () => {
 
@@ -63,8 +63,9 @@ export default class Validator {
     this.resetValidation();
     // Boucle pour chaque input du formulaire
     // avec un switch pour check les différents type d'input
+    // et afficher un message d'erreur si la saisie n'est pas conforme
     for (const field in this.formFields) {
-
+      // On test les différents cas sur le type de validation du FormFields
       switch (this.formFields[field].validationType) {
 
         case "name":

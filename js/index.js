@@ -34,6 +34,7 @@ console.log("toto");
     
     formName.reset();
     Modal.validation();
+    
 
   }
 
