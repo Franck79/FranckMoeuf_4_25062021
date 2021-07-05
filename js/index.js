@@ -26,7 +26,7 @@ console.log("toto");
   const values = {};
   Object.keys(formFields).forEach((formFieldsKey) => {
     const element = formFields[formFieldsKey].element;
-    const value = element.target.value;
+    const value = element && element.target && element.target.value;
     values[formFieldsKey] = value;
   })
   console.log(values);
