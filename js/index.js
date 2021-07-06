@@ -21,20 +21,42 @@ const formName = document.getElementsByName("reserve")[0];
 // on empeche l'envoie de celui ci
 // On réinitialise et on envoie le formulaire après validation 
 formName.onsubmit = (event) => {
-console.log("toto");
+
   event.preventDefault();
+
   const values = {};
+
   Object.keys(formFields).forEach((formFieldsKey) => {
+
     const element = formFields[formFieldsKey].element;
-    const value = element && element.target && element.target.value;
+    const type = formFields[formFieldsKey].validationType;
+    let radioValue;
+    const value = element && element.value;
     values[formFieldsKey] = value;
+
+    if (type === "radio") {
+
+      for (let i = 0; i < element.length; i++) {
+
+        if (element[i].checked) {
+
+            radioValue = element[i].value;
+            values['location'] = radioValue;
+            
+        }
+        
+      }
+      
+    }
+
   })
+
   console.log(values);
+
   if (validator.launchValidation()) {
     
     formName.reset();
     Modal.validation();
-    
 
   }
 
