@@ -164,7 +164,7 @@ export default class Validator {
       }
 
     }
-
+    // On retourne 'true' si toutes les entrées sont valides
     return this.getFormValid();
 
   };

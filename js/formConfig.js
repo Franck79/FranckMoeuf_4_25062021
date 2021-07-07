@@ -1,6 +1,6 @@
 // Constante pour récupérer les id des input du formulaire
 // Type de validation
-// et Messages d'invalidité
+// et messages d'erreur
 const formFields = {
   firstName: {
     element: document.getElementById("first"),
