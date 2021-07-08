@@ -32,7 +32,7 @@ const formFields = {
     validationType: "radio",
     invalidMessage: "Veuillez selectionner une ville."
   },
-  checkbox: {
+  hasAcceptedConditions: {
     element: document.getElementById("checkbox1"),
     validationType: "checkbox",
     invalidMessage: "Vous devez vérifier que vous acceptez les termes et conditions."

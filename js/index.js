@@ -25,28 +25,33 @@ formName.onsubmit = (event) => {
   event.preventDefault();
 
   const values = {};
-  //Affichage des valuers des entrées du formulaire
+  //Affichage des valeurs des entrées du formulaire
   // après validation et confirmation
   // Boucle sur les champs du formulaire
   Object.keys(formFields).forEach((formFieldsKey) => {
-    // On stock les ID des champs du formulaire
+    // On stock une référence au champ du formulaire
     const element = formFields[formFieldsKey].element;
-    // On stock le type des champs du formulaire
+    // On stock le type du champ du formulaire
     const type = formFields[formFieldsKey].validationType;
-    // Initialisation de la variable afin de stocker la valeur du bouton radio selectionné
+    
     let radioValue;
+
     // On récupère les valeurs des entrées
     const value = element && element.value;
+    
     // On push les valeurs dans l'array avec la correspondance des clés
     values[formFieldsKey] = value;
-    // Condition sur le type radio
+    
     if (type === "radio") {
+
       // Boucle sur tous les boutons radio
       for (let i = 0; i < element.length; i++) {
+
         // On cherche le bouton radio qui est selectionné
         if (element[i].checked) {
-            // On stock la valeur trouvée
+            
             radioValue = element[i].value;
+
             // On écrit la valeur sur la bonne clé
             values['location'] = radioValue;
             
@@ -57,13 +62,17 @@ formName.onsubmit = (event) => {
     }
 
   })
-  // On affiche dans le log les clé des champs du formulaire avec leurs valeurs
+
+  // On affiche dans le log les clés des champs du formulaire avec leurs valeurs
   console.log(values);
+
   // Condition pour la validation du formulaire
   if (validator.launchValidation()) {
+
     // Si la méthode return 'true' on reset le formulaire
     formName.reset();
-    // On affiche le message de confirmation
+
+    // On affiche le bloc avec le message de confirmation
     Modal.validation();
 
   }
