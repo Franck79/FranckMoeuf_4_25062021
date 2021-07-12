@@ -40,6 +40,7 @@ const formFields = {
 };
 
 // Constante contenant toutes les input du formulaire
+// ce qui va servir a réinitialiser tout le formulaire.
 const fieldContainer = document.querySelectorAll(".formData");
 
 export { formFields, fieldContainer};
