@@ -423,7 +423,7 @@ input[data-error]::after {
   color: #fff;
   position: relative;
   text-align: left;
-  min-width: 424px;
+  min-width: 300px;
 }
 .hero-content::after {
   content: "";
@@ -446,7 +446,7 @@ input[data-error]::after {
 .hero-text {
   width: 146%;
   font-weight: normal;
-  margin-top: 57px;
+  margin-top: 60px;
   padding: 0;
 }
 .btn-signup {
@@ -455,7 +455,7 @@ input[data-error]::after {
   font-size: 1.3rem;
   padding: 15px 23px;
   margin: 0;
-  margin-top: 59px;
+  margin-top: 70px;
 }
 .hero-img {
   grid-column: span 8;
@@ -498,15 +498,14 @@ footer {
     display: none;
   }
   .hero-headline {
-    width: 310px;
-    height: auto;
-    font-size: 3rem;
+    font-size: 38px;
+    font-weight: 800;
     white-space: normal;
   }
   .hero-text {
     width: 300px;
     height: auto;
-    font-size: 20px;
+    font-size: 18px;
   }
   .hero-img img {
     border-radius: 10px;
@@ -518,7 +517,7 @@ footer {
     padding: 12px 35px;
   }
   .copyrights {
-    margin-top: 50px;
+    margin-top: 25px;
     text-align: center;
   }
 }
