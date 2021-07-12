@@ -28,6 +28,7 @@ p {
 
 img {
   padding-right: 1rem;
+  padding-left: 8px;
 }
 
 .topnav {
@@ -497,11 +498,13 @@ footer {
     display: none;
   }
   .hero-headline {
+    width: 310px;
+    height: auto;
     font-size: 3rem;
     white-space: normal;
   }
   .hero-text {
-    width: 380px;
+    width: 300px;
     height: auto;
     font-size: 20px;
   }
