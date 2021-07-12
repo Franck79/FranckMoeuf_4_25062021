@@ -482,6 +482,13 @@ footer {
   margin: 0 20px;
 }
 @media screen and (max-width: 800px) {
+  img {
+    padding-right: 1rem;
+    padding-left: 8px;
+    height: 25px;
+    width:170px;
+    margin-top:15px;
+}
   .hero-section {
     display: block;
     box-shadow: unset;
@@ -499,7 +506,7 @@ footer {
   }
   .hero-headline {
     font-size: 38px;
-    font-weight: 800;
+    font-weight: bold;
     white-space: normal;
   }
   .hero-text {
